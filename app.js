@@ -3,4 +3,10 @@ const path= require('path');
 
 const program= path.resolve('child.js');
 
-const child = fork(program);
+console.log("Hi");
+
+const child = fork(program, [], {
+  silent: true
+});
+
+console.log("I am in parent");
